@@ -13,8 +13,8 @@ def synonyms(word):
 	page="http://www.wordreference.com/redirect/translation.aspx"
 	
 	
-	s = requests.Session()
-	r = s.get(page,params=payload)
+	#s = requests.Session()
+	r = requests.get(page,params=payload)
 
 	#r = requests.get(page,payload)
 	
