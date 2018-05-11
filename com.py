@@ -61,8 +61,8 @@ def echo_all(updates):
     for update in updates["result"]:
         try:
             text = update["message"]["text"]
-            #word=synonyms(text)
-            word=webtest()
+            word=synonyms(text)
+            #word=webtest()
             chat = update["message"]["chat"]["id"]
             send_message(word, chat)
         except Exception as e:
