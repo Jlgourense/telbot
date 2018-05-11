@@ -8,7 +8,10 @@ import time
 TOKEN = '528588942:AAFRg4bw-Qr1G4tf8lMDgiOR4v4SHKD4Wg4'
 URL = "https://api.telegram.org/bot{}/".format(TOKEN)
 
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    level=logging.INFO)
 
+logger = logging.getLogger(__name__)
 def get_url(url):
     response = requests.get(url)
     content = response.content.decode("utf8")
