@@ -81,11 +81,12 @@ def main():
         if len(updates["result"]) > 0:
             last_update_id = get_last_update_id(updates) + 1
             echo_all(updates)
-            time.sleep(0.7)
+            #time.sleep(0.7)
             
         
 
 
 
 if __name__ == '__main__':
+	print "shiiiiiiiiiiiiiiT"
 	main()
