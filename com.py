@@ -21,23 +21,23 @@ def get_json_from_url(url):
     return js
 
 #NO poliing
-
+'''
 def get_updates(offset=None):
     url = URL + "getUpdates"
     if offset:
         url += "?offset={}".format(offset)
     js = get_json_from_url(url)
     return js
-
-#polling
 '''
+#polling
+
 def get_updates(offset=None):
     url = URL + "getUpdates?timeout=20"
     if offset:
         url += "&offset={}".format(offset)
     js = get_json_from_url(url)
     return js
-'''
+
 def get_last_chat_id_and_text(updates):
     num_updates = len(updates["result"])
     last_update = num_updates - 1
