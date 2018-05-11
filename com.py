@@ -76,7 +76,6 @@ def echo_all(updates):
     
 def main():
     last_update_id = None
-    print "shiiiiiiiiiiiiiiT"
     while True:
         updates = get_updates(last_update_id)
         if len(updates["result"]) > 0:
