@@ -3,7 +3,7 @@
 import time
 import json 
 import requests
-from wordrefretrievafun import synonyms
+from wordrefretrievafun import synonyms,webtest
 import time
 TOKEN = '528588942:AAFRg4bw-Qr1G4tf8lMDgiOR4v4SHKD4Wg4'
 URL = "https://api.telegram.org/bot{}/".format(TOKEN)
@@ -61,7 +61,8 @@ def echo_all(updates):
     for update in updates["result"]:
         try:
             text = update["message"]["text"]
-            word=synonyms(text)
+            #word=synonyms(text)
+            word=webtest()
             chat = update["message"]["chat"]["id"]
             send_message(word, chat)
         except Exception as e:

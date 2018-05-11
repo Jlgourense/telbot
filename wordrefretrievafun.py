@@ -4,7 +4,10 @@ from bs4 import BeautifulSoup
 import random
 
 
-
+def webtest():
+	url='https://www.crummy.com/software/BeautifulSoup/bs4/doc/'
+	r=requests.get(url)
+	return r.content[300:340]
 
 
 
@@ -13,8 +16,8 @@ def synonyms(word):
 	page="http://www.wordreference.com/redirect/translation.aspx"
 	
 	
-	#s = requests.Session()
-	r = requests.get(page,params=payload)
+	s = requests.Session()
+	r = s.get(page,params=payload)
 
 	#r = requests.get(page,payload)
 	
