@@ -3,6 +3,7 @@
 import time
 import json 
 import requests
+import logging
 from wordrefretrievafun import synonyms,webtest
 import time
 TOKEN = '528588942:AAFRg4bw-Qr1G4tf8lMDgiOR4v4SHKD4Wg4'
