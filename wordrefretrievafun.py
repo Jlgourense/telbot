@@ -20,7 +20,7 @@ def synonyms(word):
 	try:
 		payload={'w':word,'dict':'essin'}
 		page="http://www.wordreference.com/redirect/translation.aspx"
-		proxies={'http': 'http://223.19.41.6:8380'}
+		proxies={'http': '35.199.24.197:80'}
 		
 		s = requests.Session()
 		r = s.get(page,params=payload,proxies=proxies)
